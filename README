@@ -1,0 +1,55 @@
+This repository contains a full-stack project setup with separate frontend and backend repositories. The repositories are managed as submodules within this main repository.
+
+Configuration
+    The configuration file config.yaml contains settings that are used by both the frontend and backend scripts.
+
+Cloning the Repository
+To clone this repository along with its submodules, use the following command: git clone --recurse-submodules https://github.com/AliAljawad/fullstack-repo
+
+Prerequisites:
+   1- Git: Ensure Git is installed on your machine.
+   2-Python: Make sure you have Python installed.
+   3-Git Bash (for Windows users)
+
+Running the Application:
+    To run the frontend and backend repositories just type "run.bat" in your repository directory terminal.
+
+Updating Submodules:
+    To update the submodules just type "update_submodules.bat" in your repository directory terminal.
+
+Automate Submodule Updates (Windows):
+    You can automate the submodule updates by setting up a scheduled task in Task Scheduler to run the update_submodules.bat script at regular intervals.
+    Steps to Set Up Task Scheduler:
+    1- Open Task Scheduler (type "Task Scheduler" in the search bar).
+        Press Win + R, type taskschd.msc, and press Enter.
+    2-Create a New Task
+        Click "Create Task" on the right-hand side.
+    3-General Tab
+
+        Name: "Update Git Submodules".
+        Choose "Run whether user is logged on or not".
+        Check "Run with highest privileges" to ensure it has the necessary permissions.
+
+    4-Triggers Tab
+
+        Click "New" to create a new trigger.
+        Set the desired schedule (e.g., daily, weekly) and specify the start time.
+        Click "OK".
+
+    5-Actions Tab
+
+        Click "New" to create a new action.
+        Set "Action" to "Start a program".
+        In the "Program/script" field, enter the path to update_submodules.bat.
+        Click "OK".
+
+    6-Conditions and Settings Tabs
+
+        Adjust any additional settings as needed (e.g., start the task only if the computer is idle).
+        Click "OK" to create the task.
+
+    7-Verify the Scheduled Task
+
+        In Task Scheduler, locate the "Update Git Submodules" task.
+        Right-click the task and select "Run" to manually test it.
+        Ensure it runs successfully and updates the submodules.
